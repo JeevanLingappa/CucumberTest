@@ -24,13 +24,13 @@ public class MultipleOrderStepDefination extends BasePageObject {
 	CheckOutPO cp;
 	OrderConfirmationPO oc;
 
-	@When("^User search (.+) on search option$")
+	@When("^User search (.+) on search options$")
 	public void user_search_on_search_option(String vegname) throws Throwable {
 		hm = new HomePagePO(driver);
 		hm.getSearchOption().sendKeys(vegname);
 	}
 
-	@And("^Added (.+) items to the cart by clicking add to cart button$")
+	@And("^Added (.+) items to the cart by clicking add toCart button$")
 	public void added_items_to_the_cart_by_clicking_add_to_cart_button(String quantity) throws Throwable {
 
 		hm = new HomePagePO(driver);
@@ -46,7 +46,7 @@ public class MultipleOrderStepDefination extends BasePageObject {
 		Thread.sleep(5000);
 	}
 
-	@And("^product name should contains (.+) and Quantity as (.+)$")
+	@And("^product name should contains (.+) and quantity as (.+)$")
 	public void product_name_should_contains_and_quantity_as(String vegname, String quantity) throws Throwable {
 
 		oc = new OrderConfirmationPO(driver);

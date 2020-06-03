@@ -1,12 +1,12 @@
 Feature: vegetable search and place order on greenKart
 
-@SmokeTest
+@CucuSmokeTest
 Scenario: Validation of search functionality
 Given User logged into greenKart home page
 When User search "Cucumber" on search option 
 Then "Cucumber" vegetable should be shortlisted
 
-@ParameterTest
+@CucuParameterTest
 Scenario: Validation of search functionality and placing the order
 Given User logged into greenKart home page
 When User search "Brinjal" on search option 
