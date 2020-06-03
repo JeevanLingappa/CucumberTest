@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="32.604">
-    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality" time="10.766">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="54.961">
+    <testcase classname="Multiple vegetable search and place order on greenKart" name="Validation of search functionality and placing multiple Vegetable order" time="18.577">
         <system-out>
             <![CDATA[Given User logged into greenKart home page..................................passed
-When User search "Cucumber" on search option................................passed
-Then "Cucumber" vegetable should be shortlisted.............................passed
+When User search Brinjal on search option...................................passed
+And Added 3 items to the cart by clicking add to cart button................passed
+And User clicks on ProccedToCheckOut button.................................passed
+Then User should navigate to order confirmation page........................passed
+And product name should contains Brinjal and Quantity as 3..................passed
+And Place order button should be enabled....................................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality and placing the order" time="21.293">
+    <testcase classname="Multiple vegetable search and place order on greenKart" name="Validation of search functionality and placing multiple Vegetable order 2" time="17.906">
         <system-out>
             <![CDATA[Given User logged into greenKart home page..................................passed
-When User search "Brinjal" on search option.................................passed
-And Added "5" items to the cart by clicking add to cart button..............passed
+When User search Beetroot on search option..................................passed
+And Added 5 items to the cart by clicking add to cart button................passed
 And User clicks on ProccedToCheckOut button.................................passed
 Then User should navigate to order confirmation page........................passed
-And product name should contains "Brinjal" and Quantity as "5"..............passed
+And product name should contains Beetroot and Quantity as 5.................passed
+And Place order button should be enabled....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Multiple vegetable search and place order on greenKart" name="Validation of search functionality and placing multiple Vegetable order 3" time="17.921">
+        <system-out>
+            <![CDATA[Given User logged into greenKart home page..................................passed
+When User search Cucumber on search option..................................passed
+And Added 2 items to the cart by clicking add to cart button................passed
+And User clicks on ProccedToCheckOut button.................................passed
+Then User should navigate to order confirmation page........................passed
+And product name should contains Cucumber and Quantity as 2.................passed
 And Place order button should be enabled....................................passed
 ]]>
         </system-out>

@@ -3,15 +3,15 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-06-03T10:09:04.218Z",
-        "line": 4,
-        "name": "Validation of search functionality",
+        "start_timestamp": "2020-06-03T13:32:00.638Z",
+        "line": 15,
+        "name": "Validation of search functionality and placing multiple Vegetable order",
         "description": "",
-        "id": "vegetable-search-and-place-order-on-greenkart;validation-of-search-functionality",
+        "id": "multiple-vegetable-search-and-place-order-on-greenkart;validation-of-search-functionality-and-placing-multiple-vegetable-order;;2",
         "after": [
           {
             "result": {
-              "duration": 92570600,
+              "duration": 82021200,
               "status": "passed"
             },
             "match": {
@@ -20,11 +20,11 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 10329363700,
+              "duration": 6538563100,
               "status": "passed"
             },
             "line": 5,
@@ -36,39 +36,97 @@
           },
           {
             "result": {
-              "duration": 221650100,
+              "duration": 178000800,
               "status": "passed"
             },
             "line": 6,
-            "name": "User search \"Cucumber\" on search option",
+            "name": "User search Brinjal on search option",
             "match": {
               "arguments": [
                 {
-                  "val": "Cucumber",
-                  "offset": 13
+                  "val": "Brinjal",
+                  "offset": 12
                 }
               ],
-              "location": "stepDefination.StepDefinationGK.user_search_something_on_search_option(java.lang.String)"
+              "location": "stepDefination.MultipleOrderStepDefination.user_search_on_search_option(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 44003400,
+              "duration": 7420753700,
               "status": "passed"
             },
             "line": 7,
-            "name": "\"Cucumber\" vegetable should be shortlisted",
+            "name": "Added 3 items to the cart by clicking add to cart button",
             "match": {
               "arguments": [
                 {
-                  "val": "Cucumber",
-                  "offset": 1
+                  "val": "3",
+                  "offset": 6
                 }
               ],
-              "location": "stepDefination.StepDefinationGK.something_vegetable_should_be_shortlisted(java.lang.String)"
+              "location": "stepDefination.MultipleOrderStepDefination.added_items_to_the_cart_by_clicking_add_to_cart_button(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4154278800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on ProccedToCheckOut button",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.user_clicks_on_proccedtocheckout_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8515000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should navigate to order confirmation page",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.user_should_navigate_to_order_confirmation_page()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 73258400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "product name should contains Brinjal and Quantity as 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brinjal",
+                  "offset": 29
+                },
+                {
+                  "val": "3",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefination.MultipleOrderStepDefination.product_name_should_contains_and_quantity_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42023200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Place order button should be enabled",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.place_order_button_should_be_enabled()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
@@ -78,15 +136,15 @@
         ]
       },
       {
-        "start_timestamp": "2020-06-03T10:09:15.001Z",
-        "line": 10,
-        "name": "Validation of search functionality and placing the order",
+        "start_timestamp": "2020-06-03T13:32:19.232Z",
+        "line": 16,
+        "name": "Validation of search functionality and placing multiple Vegetable order",
         "description": "",
-        "id": "vegetable-search-and-place-order-on-greenkart;validation-of-search-functionality-and-placing-the-order",
+        "id": "multiple-vegetable-search-and-place-order-on-greenkart;validation-of-search-functionality-and-placing-multiple-vegetable-order;;3",
         "after": [
           {
             "result": {
-              "duration": 109065400,
+              "duration": 102998100,
               "status": "passed"
             },
             "match": {
@@ -95,14 +153,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9026272000,
+              "duration": 6077880800,
               "status": "passed"
             },
-            "line": 11,
+            "line": 5,
             "name": "User logged into greenKart home page",
             "match": {
               "location": "stepDefination.StepDefinationGK.user_logged_into_greenkart_home_page()"
@@ -111,46 +169,46 @@
           },
           {
             "result": {
-              "duration": 301315600,
+              "duration": 148997600,
               "status": "passed"
             },
-            "line": 12,
-            "name": "User search \"Brinjal\" on search option",
+            "line": 6,
+            "name": "User search Beetroot on search option",
             "match": {
               "arguments": [
                 {
-                  "val": "Brinjal",
-                  "offset": 13
+                  "val": "Beetroot",
+                  "offset": 12
                 }
               ],
-              "location": "stepDefination.StepDefinationGK.user_search_something_on_search_option(java.lang.String)"
+              "location": "stepDefination.MultipleOrderStepDefination.user_search_on_search_option(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 7411119200,
+              "duration": 7290727700,
               "status": "passed"
             },
-            "line": 13,
-            "name": "Added \"5\" items to the cart by clicking add to cart button",
+            "line": 7,
+            "name": "Added 5 items to the cart by clicking add to cart button",
             "match": {
               "arguments": [
                 {
                   "val": "5",
-                  "offset": 7
+                  "offset": 6
                 }
               ],
-              "location": "stepDefination.StepDefinationGK.added_something_items_to_the_cart_by_clicking_add_to_cart_button(java.lang.String)"
+              "location": "stepDefination.MultipleOrderStepDefination.added_items_to_the_cart_by_clicking_add_to_cart_button(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4224943800,
+              "duration": 4153428000,
               "status": "passed"
             },
-            "line": 14,
+            "line": 8,
             "name": "User clicks on ProccedToCheckOut button",
             "match": {
               "location": "stepDefination.StepDefinationGK.user_clicks_on_proccedtocheckout_button()"
@@ -159,10 +217,10 @@
           },
           {
             "result": {
-              "duration": 16486000,
+              "duration": 10998000,
               "status": "passed"
             },
-            "line": 15,
+            "line": 9,
             "name": "User should navigate to order confirmation page",
             "match": {
               "location": "stepDefination.StepDefinationGK.user_should_navigate_to_order_confirmation_page()"
@@ -171,32 +229,165 @@
           },
           {
             "result": {
-              "duration": 90102900,
+              "duration": 72133200,
               "status": "passed"
             },
-            "line": 16,
-            "name": "product name should contains \"Brinjal\" and Quantity as \"5\"",
+            "line": 10,
+            "name": "product name should contains Beetroot and Quantity as 5",
             "match": {
               "arguments": [
                 {
-                  "val": "Brinjal",
-                  "offset": 30
+                  "val": "Beetroot",
+                  "offset": 29
                 },
                 {
                   "val": "5",
-                  "offset": 56
+                  "offset": 54
                 }
               ],
-              "location": "stepDefination.StepDefinationGK.product_name_should_contains_something_and_quantity_as_something(java.lang.String,java.lang.String)"
+              "location": "stepDefination.MultipleOrderStepDefination.product_name_should_contains_and_quantity_as(java.lang.String,java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 105287400,
+              "duration": 44339300,
               "status": "passed"
             },
-            "line": 17,
+            "line": 11,
+            "name": "Place order button should be enabled",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.place_order_button_should_be_enabled()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@MainTest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-03T13:32:37.148Z",
+        "line": 17,
+        "name": "Validation of search functionality and placing multiple Vegetable order",
+        "description": "",
+        "id": "multiple-vegetable-search-and-place-order-on-greenkart;validation-of-search-functionality-and-placing-multiple-vegetable-order;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 75851400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefination.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6148810500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User logged into greenKart home page",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.user_logged_into_greenkart_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 169000400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User search Cucumber on search option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cucumber",
+                  "offset": 12
+                }
+              ],
+              "location": "stepDefination.MultipleOrderStepDefination.user_search_on_search_option(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7280839300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Added 2 items to the cart by clicking add to cart button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 6
+                }
+              ],
+              "location": "stepDefination.MultipleOrderStepDefination.added_items_to_the_cart_by_clicking_add_to_cart_button(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4151477800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on ProccedToCheckOut button",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.user_clicks_on_proccedtocheckout_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5999700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should navigate to order confirmation page",
+            "match": {
+              "location": "stepDefination.StepDefinationGK.user_should_navigate_to_order_confirmation_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56998400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "product name should contains Cucumber and Quantity as 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cucumber",
+                  "offset": 29
+                },
+                {
+                  "val": "2",
+                  "offset": 54
+                }
+              ],
+              "location": "stepDefination.MultipleOrderStepDefination.product_name_should_contains_and_quantity_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28002200,
+              "status": "passed"
+            },
+            "line": 11,
             "name": "Place order button should be enabled",
             "match": {
               "location": "stepDefination.StepDefinationGK.place_order_button_should_be_enabled()"
@@ -211,11 +402,11 @@
         ]
       }
     ],
-    "name": "vegetable search and place order on greenKart",
+    "name": "Multiple vegetable search and place order on greenKart",
     "description": "",
-    "id": "vegetable-search-and-place-order-on-greenkart",
+    "id": "multiple-vegetable-search-and-place-order-on-greenkart",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/Search.feature",
+    "uri": "file:src/test/java/features/SearchAndOrder.feature",
     "tags": []
   }
 ]
