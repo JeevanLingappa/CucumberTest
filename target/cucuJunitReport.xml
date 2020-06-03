@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="50.253">
-    <testcase classname="Validation of selenium practice website" name="Test01_validation of simple demo form Two input field" time="31.19">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="18.582">
+    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality" time="5.736">
         <system-out>
-            <![CDATA[Given user is on simple demo form homepage..................................passed
-When user enters a value of "10" and "30"...................................passed
-And click on Get_Total button...............................................passed
-Then user should see the sum of "10" and "30"...............................passed
+            <![CDATA[Given User logged into greenKart home page..................................passed
+When User search "Cucumber" on search option................................passed
+Then "Cucumber" vegetable should be shortlisted.............................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Validation of selenium practice website" name="Test02_validation of simple demo form Two input field" time="18.908">
+    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality and placing the order" time="12.319">
         <system-out>
-            <![CDATA[Given user is on simple demo form homepage..................................passed
-When user enters a value of "20" and "40"...................................passed
-And click on Get_Total button...............................................passed
-Then user should see the sum of "20" and "40"...............................passed
+            <![CDATA[Given User logged into greenKart home page..................................passed
+When User search "Brinjal" on search option.................................passed
+And Added "5" items to the cart by clicking add to cart button..............passed
+And User clicks on ProccedToCheckOut button.................................passed
+Then User should navigate to order confirmation page........................passed
+And product name should contains "Brinjal" and Quantity as "5"..............passed
+And Place order button should be enabled....................................passed
 ]]>
         </system-out>
     </testcase>
