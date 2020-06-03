@@ -2,9 +2,13 @@ package stepDefination;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
+import CucumberPractice.BasePageObject;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,9 +22,10 @@ public class StepDefinationGK {
 
 	@Given("^User logged into greenKart home page$")
 	public void user_logged_into_greenkart_home_page() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "resources/drivers/chromedriver.exe");
-		 driver = new ChromeDriver();
+		
+		 driver = BasePageObject.getWebDriver();
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		driver.manage().window().maximize();
 
 	}
 
@@ -36,12 +41,8 @@ public class StepDefinationGK {
 		String veg = driver.findElement(By.xpath("//div[@class='product']/h4")).getText();
 		Assert.assertTrue(veg.contains(strArg1));
 		System.out.println(veg);
-//		if (veg.contains(strArg1)) {
-//			System.out.println("Pass");
-//		} else {
-//			System.out.println("Fail");
-//		}
-		driver.close();
+
+		
 	}
 	
 	
@@ -56,10 +57,15 @@ public class StepDefinationGK {
 
 	    @And("^Added \"([^\"]*)\" items to the cart by clicking add to cart button$")
 	    public void added_something_items_to_the_cart_by_clicking_add_to_cart_button(String strArg1) throws Throwable {
-	       driver.findElement(By.cssSelector("input.quantity")).sendKeys(strArg1);
-	       Thread.sleep(1000);
+	    	WebElement ele = driver.findElement(By.cssSelector("input.quantity"));
+	    	Actions ac = new Actions(driver);
+	    	ac.moveToElement(ele).doubleClick().sendKeys(Keys.BACK_SPACE).sendKeys(strArg1).build().perform();
+	    	
+	    	Thread.sleep(2000);
+	    	//driver.findElement(By.cssSelector("input.quantity")).sendKeys(strArg1);
+	       //Thread.sleep(2000);
 	       driver.findElement(By.xpath("//button[text()='ADD TO CART']")).click();
-	       Thread.sleep(2000);
+	       Thread.sleep(5000);
 	    }
 
 	    @And("^User clicks on ProccedToCheckOut button$")
@@ -75,13 +81,13 @@ public class StepDefinationGK {
 	    public void product_name_should_contains_something_and_quantity_as_something(String strArg1, String strArg2) throws Throwable {
 	    Assert.assertTrue( driver.findElement(By.cssSelector("p.product-name")).getText().contains(strArg1));
 	    
-	    Assert.assertTrue(driver.findElement(By.cssSelector("p.quantity")).getText().contains(strArg2));
+	    Assert.assertTrue(driver.findElement(By.cssSelector("p.quantity")).getText().contentEquals(strArg2));
 	    }
 
 	    @And("^Place order button should be enabled$")
 	    public void place_order_button_should_be_enabled() throws Throwable {
 	    	Assert.assertTrue(driver.findElement(By.xpath("//button[text()='Place Order']")).isDisplayed());
-	    	driver.close();
+	    	
 	        
 	    }
 

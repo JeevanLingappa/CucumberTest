@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="18.582">
-    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality" time="5.736">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="32.604">
+    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality" time="10.766">
         <system-out>
             <![CDATA[Given User logged into greenKart home page..................................passed
 When User search "Cucumber" on search option................................passed
@@ -8,7 +8,7 @@ Then "Cucumber" vegetable should be shortlisted.............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality and placing the order" time="12.319">
+    <testcase classname="vegetable search and place order on greenKart" name="Validation of search functionality and placing the order" time="21.293">
         <system-out>
             <![CDATA[Given User logged into greenKart home page..................................passed
 When User search "Brinjal" on search option.................................passed

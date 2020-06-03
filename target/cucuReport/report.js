@@ -44,6 +44,9 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
 formatter.scenario({
   "name": "Validation of search functionality and placing the order",
   "description": "",
@@ -122,6 +125,9 @@ formatter.match({
   "location": "stepDefination.StepDefinationGK.place_order_button_should_be_enabled()"
 });
 formatter.result({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 });
