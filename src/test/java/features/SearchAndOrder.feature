@@ -1,6 +1,6 @@
 Feature: Multiple vegetable search and place order on greenKart
 
-@MainTest
+@DataDrivenTest
 Scenario Outline: Validation of search functionality and placing multiple Vegetable order
 Given User logged into greenKart home page
 When User search <vegName> on search option 
